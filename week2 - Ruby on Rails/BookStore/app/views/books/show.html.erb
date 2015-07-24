@@ -1,0 +1,30 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<h2>
+	<strong>Name:</strong>
+	<%= @book.name %> (<%= link_to 'Edit Book', edit_book_path(@book) %>)</h2> 
+
+<table>
+	<tr>
+		<td class="styleblack"> <strong>Description:</strong></td>
+		<td><%= @book.description %></td>
+	</tr> 
+	<tr> 
+		<td class="styleblack"><strong>Price:</strong></td>
+		<td><%= @book.price %> </td>
+
+	</tr> 
+
+	<tr> 
+		<td class="styleblack"><strong>Average Rating:</strong></td>
+		<td><%= @book.average_total_rating %> <%= link_to 'Show Ratings', book_ratings_path(@book) %> </td> 
+
+	</tr> 
+
+</table>
+
+<br>
+<%= link_to 'Back to Books', books_path %> |
+<%= link_to 'Add a new rating', new_book_rating_path(@book) %> 

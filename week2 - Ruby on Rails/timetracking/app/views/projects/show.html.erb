@@ -1,0 +1,17 @@
+<%= flash_message_edit %>
+
+	<h2 >
+		<strong>Name:</strong>
+		<%= @project.name %>
+	</h2>
+
+	<ul>
+		<li class="styleblack">
+			<strong>Description:</strong>
+			<%= @project.new_description %>
+			<%= link_to 'Show entries', project_entries_path(@project) %>
+		</li>
+	</ul> 
+	
+<br>
+<%= link_to 'Back to Projects', projects_path %>

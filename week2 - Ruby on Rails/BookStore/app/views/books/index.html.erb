@@ -1,0 +1,27 @@
+<h1> Virgo's Book Store </h1>
+
+<%= form_tag(book_search_path) do %>
+	<div>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Books" %>
+
+      <button><i>Search</i></button>
+    </div>
+ <% end %>
+
+<br>
+
+<dl>
+	<% @books.each do |book| %>
+		<dd>
+			<%= book.name %> <%= link_to 'Read more', book_path(book) %> | 
+			<%= link_to 'Edit', edit_book_path(book) %> |
+			<%= link_to 'Delete', book_path(book), method: :delete, data: {confirm: "Are you sure?"} %>
+		</dd>
+	<% end %>
+</dl>
+	
+<br>
+
+<p>
+    <%= link_to 'New Book', new_book_path %>
+</p>

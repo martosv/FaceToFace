@@ -1,0 +1,20 @@
+<h1> <%= "Rating of #{@book.name}" %></h1>
+
+<br>
+
+<h3> <%= "Average rating" %> : <%= @book.average_total_rating %></h3>
+
+	<dl>
+	<% @ratings.each do |rating| %>
+		<dd>
+			<%= rating.user %> : <%= rating.score %>
+		</dd>
+	<% end %>
+</dl>
+
+<br>
+
+<p>
+    <%= link_to 'New Rating', new_book_rating_path(@book) %> | 
+    <%= link_to 'Back', book_path(@book) %>
+</p>

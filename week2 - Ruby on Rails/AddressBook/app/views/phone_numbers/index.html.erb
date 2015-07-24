@@ -1,0 +1,18 @@
+<h2> <%= "Contact phone numbers of #{@contact.name}" %></h2>
+
+<dl>
+	<% @phone_numbers.each do |phone_number| %>
+		<dd>
+			<%= phone_number.phone_number %> 
+			<%= link_to 'Edit', edit_contact_phone_number_path(@contact, phone_number) %> |
+			<%= link_to 'Delete', contact_phone_number_path(@contact, phone_number), method: :delete, data: {confirm: "Are you sure?"} %>
+		</dd>
+	<% end %>
+</dl>
+	
+<br>
+
+<p class="styleblack">
+    <%= link_to 'New Phone Number', new_contact_phone_number_path(@contact) %> | 
+    <%= link_to 'Back', contact_path(@contact) %>
+</p>

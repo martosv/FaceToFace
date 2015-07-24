@@ -1,0 +1,20 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <% end %>
+<% end %>
+
+<%= form_for [@contact, @email] do |f| %>
+
+  <h2 class="p5 top-5">Information</h2>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %> <br>
+
+  <%= f.submit 'Save' %>
+
+<% end %>
+
+  <p class="styleblack">
+      <%= link_to 'Back to Contact', contact_path(@contact)%>
+  </p>

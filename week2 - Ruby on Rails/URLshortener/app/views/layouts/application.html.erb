@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URLshortener</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+ <footer>
+    <div class="footer-col-1">
+      <h3>Address</h3>
+      <dl class="adrss">
+        <dd><span>Country:</span>Spain</dd>
+        <dd><span>City:</span>Madrid</dd>
+        <dd><span>Email:</span><a href="#" class="link">virginia.martos.muoz@gmail.com</a></dd>
+      </dl> 
+    </div>   
+    <div class="footer-col-1">
+      <h3>Why Us</h3>
+      <dl class="list-1">
+        <dd>Visit my web</dd>
+        <dd>© 2015 Ironhack 
+        <a rel="nofollow" href="http://www.ironhack.com/" target="_blank" class="link">Website</a> by Ironhack </dd>
+      </dl>
+    </div>
+  </footer>
+
+</body>
+</html>

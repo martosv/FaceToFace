@@ -1,0 +1,12 @@
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <% end %>
+<% end %>
+
+<%= render "form" %>
+
+<br>
+
+<%= link_to 'Cancel', project_entries_path(@project) %>

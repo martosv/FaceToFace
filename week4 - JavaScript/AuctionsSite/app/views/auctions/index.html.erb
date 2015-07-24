@@ -1,0 +1,16 @@
+<h1> Virgo's Auction Site </h1>
+
+<dl>
+	<% @auctions.each do |auction| %>
+		<dd>
+			<%= auction.item %> <%= link_to 'Read more', user_auction_path(@user,auction) %>
+			<%= link_to 'Add a Bid', new_user_auction_bid_path(User.new(), auction) %>
+		</dd>
+	<% end %>
+</dl>
+
+<br>
+
+<p>
+    <%= link_to 'New auction', new_auction_path(@user) %>
+</p>

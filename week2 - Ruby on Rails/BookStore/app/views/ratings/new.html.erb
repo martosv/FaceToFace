@@ -1,0 +1,31 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <% end %>
+<% end %>
+
+<%= form_for [@book, @ratings] do |f| %>
+      
+      
+    <div>    
+      <h2>New rating</h2>
+   
+          <p>
+              <%= f.label :user %><br>
+              <%= f.text_field :user %>
+          </p>
+
+          <p>
+              <%= f.label :score %> (from 1 to 5)<br>
+              <%= f.text_field :score %>
+          </p>
+
+
+      <div><%= f.submit 'Save' %></div>
+
+   </div>
+ <% end %>
+
+  <p>
+      <%= link_to 'Back to Books', books_path%>
+  </p>

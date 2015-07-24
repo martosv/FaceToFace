@@ -1,0 +1,14 @@
+<h1> The top 10 URLs </h1>
+
+<ol>
+
+	<% @url_links.each do |url_link| %>
+		<li> 
+			<%= url_link.url %> : <%= url_link.visits %> visits
+		</li>
+	<% end %>
+</ol>
+
+  <p>
+    <%= link_to 'Back', url_links_path %>
+  </p>

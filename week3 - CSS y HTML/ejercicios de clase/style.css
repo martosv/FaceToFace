@@ -1,0 +1,31 @@
+body {
+	box-sizing: border-box;
+	font-family: calibri;
+	background-color: #FFE4C4;
+	padding: 10px;
+}
+
+footer {
+	color: pink;
+	text-align:center;
+	background-color: purple;
+	padding: 10px;
+}
+
+header {
+	color: pink;
+	background-color: black;
+	padding: 10px;
+}
+
+.centrado {
+	display: block;
+	margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.box-comment {
+	rows:"10"; 
+	cols:"50";
+}

@@ -1,0 +1,17 @@
+	<h2 >
+		<strong>Name:</strong>
+		<%= @contact.name %>
+	</h2>
+
+	<ul>
+		<li class="styleblack">
+			<strong>Emails:</strong>
+			<% @contact.emails.each do |email| %>
+				<%= email.email %>
+				<%= link_to 'Edit email', edit_contact_email_path(@contact, email) %>
+			<% end %>
+		</li>
+	</ul> 
+	
+<br>
+<%= link_to 'Back to Projects', projects_path %>

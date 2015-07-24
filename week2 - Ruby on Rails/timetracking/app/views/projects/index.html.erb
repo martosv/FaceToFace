@@ -1,0 +1,24 @@
+<h1> Last 10 projects </h1>
+
+<ul>
+	<!--% @projects.each do |project| % -->
+	<!-- li--> <!--%= project.name % --> <!-- '-' --> <!-- %= project.new_description % -->
+	<!--li--> <!--%= #{project.name} - #{project.new_description} % --> <!--/li -->
+
+	<% @projects.each do |project| %>
+		<li> 
+			<% if(project.new_description) %>
+				<%= project.name + " - " + project.new_description %>
+			<% else %>
+				<%= project.name %> 
+			<% end %>
+			<%= link_to 'Show project', project_path(project) %> | 
+			<%= link_to 'Edit project', edit_project_path(project) %> |
+			<%= link_to 'Delete', project_path(project), method: :delete, data: {confirm: "Are you sure?"} %>
+		</li>
+	<% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New project', new_project_path %>

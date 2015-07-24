@@ -1,0 +1,19 @@
+<%= form_for @project do |f| %>
+      
+      
+    <div class="p">    
+      <h2 class="p5 top-5">Information</h2>
+
+          <p>
+              <%= f.label :name %><br>
+              <%= f.text_field :name %>
+          </p>    
+          <p>
+              <%= f.label :new_description %><br>
+              <%= f.text_area :new_description %>
+          </p>
+
+      <div class="button top-3"><%= f.submit 'save' %></div>
+
+   </div>
+ <% end %>

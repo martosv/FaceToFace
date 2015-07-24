@@ -1,0 +1,30 @@
+html, body {width:100%; padding:0; margin:0;}
+
+body { 	 
+	font: 14px/24px Tahoma, Geneva, sans-serif;
+	color:pink;
+	min-width:1264px;
+	background: #000;
+	margin: 40px;
+}
+
+footer { width:90%; margin:0 auto; position:relative; overflow:hidden; padding:37px 0 40px 0; background:url(../images/line.png) 0 0 repeat-x;} 
+footer h3 {padding-bottom:15px;}
+.footer-col-1 {float:left; width:45.5%; padding:0 20px 0 0px;}
+
+
+ul {margin:0; padding:0;list-style-image:none;}
+ul.list-1 li {padding:0px 0 0px 12px; line-height:24px; background:url(../images/marker-1.gif) 0 9px no-repeat;}
+ul.list-1 li a { font-size:14px; color:#636f6f; line-height:24px;}
+ul.list-1 li a:hover {color:#ef6f53;}
+
+ul.list-2 li {padding:0px 0 6px 15px; line-height:24px; background:url(../images/marker-3.gif) 0 9px no-repeat;}
+ul.list-2 li a { font-size:14px; color:#fff; line-height:24px;}
+ul.list-2 li a:hover {color:#ef6f53;}
+
+dl.adrss { margin:0px 0 0px 0;}
+dl.adrss dt {line-height:24px; margin-bottom:3px;}
+dl.adrss dd span { width:10%; text-align:left; display:block; float:left; margin-right:12px; color:#C71585;}
+dl.adrss dd {}
+dl.adrss dd a {}
+dl.adrss dd a:hover {}

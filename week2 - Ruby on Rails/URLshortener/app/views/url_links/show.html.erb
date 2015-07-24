@@ -1,0 +1,14 @@
+<h1> Sumarize </h1>
+
+<dl>
+  <% @url_links.each do |url_link| %>
+
+	<dd>
+		<%= "#{url_link.url} / created on #{url_link.created_at.day}-#{url_link.created_at.month}-#{url_link.created_at.year} / visited #{url_link.visits} times" %>		
+	</dd>
+  <% end %>
+</dl>
+
+  <p>
+    <%= link_to 'Back', url_links_path %>
+  </p>

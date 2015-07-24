@@ -1,0 +1,87 @@
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+    <title>THE HANGMAN</title>
+</head>
+
+<body>
+
+   	<header>
+    	<div>
+    		<h1 class="title"> The Hangman </h1>
+    	</div>
+
+    	<nav class="menu">
+
+<%= form_tag(book_search_path) do %>
+  <div>
+      <%= text_field_tag :search, params[:search], placeholder: "Enter a Letter" %>
+
+      <button><i>Search</i></button>
+    </div>
+ <% end %>
+	    		
+	   		<button type="button" class="btn btn-primary">Elegir palabra <% @show_letter %></button>
+
+
+	   		<hr>
+		</nav>
+    </header>
+
+   	<section>
+   		<div class="col-lg-4 left-column">
+
+   			<%= form_for @word do |f| %>
+
+        <%=  %>
+
+ 			   	<div class="form-group">
+    				<%= f.label :word %>
+    				<div class="input-group">
+	     				<div class="input-group-addon">word</div>
+    					<%= f.text_field :word class="form-control" %>
+              <% letter = f.text_field :word %>
+              <%= @word.check_letter(letter) %>
+    				</div>
+ 				</div>
+
+   				<div class="form-group">
+    				<%f.label :suggestion %>
+    				<div class="input-group">
+	    				<div class="input-group-addon">letter</div>
+    					<%= f.text_field :suggestion class="form-control" %>
+              <% letter = f.text_field :suggestion %>
+              <% word = f.text_field :suggestion %>
+              <%= @word.check_word(word) %>
+    				</div>
+ 				</div>
+
+ 				<div class="form-group">
+    				<label for="solve"></label>
+    				<div class="input-group">
+		   				<div class="input-group-addon">solve</div>
+    					<input type="text" class="form-control" id="solve" placeholder="Answer">
+    				</div>
+ 				</div>
+
+  				<button type="submit" class="btn btn-primary personalize">Submit</button>
+			</form>
+   		</div>
+
+   		<div class="col-lg-8 right-column">
+   	
+  			<form class="form-group">
+  				<label for="lives"></label>
+	   			<div class="input-group">
+     				<div class="input-group-addon">Lives</div>
+  					<input type="text" class="form-control" id="lives">
+  			  	</div>
+  			</form>
+  		</div>
+   	</section>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>

@@ -1,0 +1,31 @@
+<div class="futurama">Futurama eDarling</div>
+
+<div class="container">
+	<% @characters.each do |character| %>
+
+		<div class="row">
+			<div class="col-md-8"></div>
+
+			<div class="col-md-4 border-1">
+				<div class="row">
+
+					<div class="row border-2">
+						<div class="col-md-12"><%= link_to(character.name, character_path(character), class: "name-character") %></div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3" id="image-size"><%= image_tag(character.photo, class: "image-size") %></div>
+						<div class="col-md-1"></div>
+						<div class="col-md-8 margin-text"> 
+							<ul>
+								<li>Favorite food: <%= character.food %></li>
+								<li>Favorite code: <%= character.code %></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<% end %>
+</div>

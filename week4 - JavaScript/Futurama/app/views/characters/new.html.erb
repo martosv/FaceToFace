@@ -1,0 +1,56 @@
+<div class="futurama">Futurama eDarling</div>
+<% if @character.errors.any? %>
+ <ul>
+   <% @character.errors.full_messages.each do |error_msg| %>
+     <li><%= error_msg %></li>
+   <% end %>
+ </ul>
+<% end %>
+
+<%= form_for @character do |f| %>
+      
+      
+    <div class="top-1">    
+      <h2 class="top-2">Information</h2>
+      <div class="top-3">
+
+          <p>
+              <%= f.label :name %>:<br>
+              <%= f.text_field :name %>
+          </p>    
+          <p>
+              <%= f.label :age %>:<br>
+              <%= f.text_field :age %>
+          </p>
+          <p>
+              <%= f.label :genre %>:<br>
+              <%= f.text_field :genre %>
+          </p>
+          <p>
+              <%= f.label :species %>:<br>
+              <%= f.text_field :species %>
+          </p>
+          <p>
+              <%= f.label "Favourite food" %>:<br>
+              <%= f.text_field :food %>
+          </p>
+          <p>
+              <%= f.label "Favourite code" %>: <br>
+              <%= f.select :code, ["Ruby", "Prython", "HTML", "CSS", "JavaScript"] %>
+          </p>
+          <p>
+              <%= f.label :photo %>:<br>
+              <%= f.text_field :photo %>
+          </p>
+
+
+          <div><%= f.submit 'Save' %></div>
+        <br>
+          <p>
+            <%= link_to 'Back to characters', characters_path %>
+          </p>
+      </div>
+          <br><br><br>
+    </div>
+
+<% end %>

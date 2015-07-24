@@ -1,0 +1,263 @@
+body, section, .container {
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	width: 100%;
+	margin: 0;
+	padding: 0;			
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	padding-top: 5px;
+}
+
+header span {
+	color: #777;
+}
+
+.fa {
+	padding: 5px 0 !important;
+
+}
+ 
+.menu {
+	position: fixed;
+	margin: -5px 0 0;
+	padding: 7px 7rem 0 !important;
+	position: fixed;
+	z-index: 9999999;
+	background-color: #FFF;
+	width: 100%;
+	height: 50px;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+}
+
+.menu-item {
+	padding-bottom: 14px;
+	padding-right: 15px;
+}
+
+.menu-items  {
+	display: inline-block;
+	padding-left: 2rem;
+}
+
+.last-item{
+	float:right;
+}
+.icons-menu {
+	font-size: 2rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+i.fa-slack {
+    -ms-transform: rotate(19deg);
+    -webkit-transform: rotate(19deg);
+    transform: rotate(19deg);
+}
+
+.menu-item:hover {
+	color: #009999;
+	border-bottom: 0.4rem solid #009999;
+}
+
+.logo {
+	color: #55acee;
+	font-size: 2.4rem;
+	margin-left: 5rem;
+}
+
+.search-input {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 23rem;
+  height: 3.5rem;
+  padding: 5px 27px 6px 12px;
+  font-size: 12px;
+  line-height: 1;
+  color: #292f33;
+  background-color: #f5f8fa;
+  border: 1px solid #e1e8ed;
+  border-radius: 21px;
+  transition: all .2s ease-in-out;
+  position: relative;
+  top: -15px;
+}
+.col-md-5.menu-items > div{
+	float: right;
+}
+
+.thumbnail {
+	display: inline-block;
+  border: 0 none;
+  box-shadow: none;
+  background-color: transparent;
+  margin: 0 10px;
+  background-image: url(asds.png); 
+	background-size: cover;
+	width: 37px;
+	height: 37px;
+	border-radius: 20%;
+}
+
+.btn-new {
+	background-color: #009999;
+	color: #FFF;
+}
+
+.btn.twittear {
+	position: relative;
+  top: -15px;
+}
+
+.background-header {
+	background-image: url(background-header.jpeg); 
+	height: 360px;
+	width: 100%;
+	background-size: cover;
+	box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.ProfileAvatar {
+	background: #fff;
+	border: 5px solid #fff;
+	border-radius: 12px;
+	box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+	position: absolute;
+	z-index: 4;
+	top: 24.5rem;
+	left: 8.5rem;
+ }
+
+ .profile-image {
+	border-radius: 12px;
+	height: 20rem;
+	width: 20rem;
+ }
+
+ .info {
+ 	border-bottom: 1px solid rgba(0,0,0,.1);
+ 	height: 5rem;
+ 	margin-top: 1rem;
+ 	padding: 0 7rem !important;
+ }
+
+
+.following {
+	font-size: 2rem;
+	color: #777;
+	text-align: right;
+}
+
+.btn-follow {
+	background-color: #55acee;
+	color: #FFF;
+}
+
+.right-content {
+	margin-top: 5rem;
+	margin-left: 2rem;
+	margin-right: -1rem;
+}
+
+.fluid-info {
+	padding-bottom: 10px;
+
+}
+
+.name {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.username {
+	color: #777;
+	padding-bottom: 10px;
+}
+
+
+.fluid{
+	width: 100%;
+	position: relative;
+	padding: 0 7rem !important;
+	margin-top: 6rem;
+	background-color: #f5f8fa;
+}
+
+a.twitter-timeline {
+	width: 100%;
+}
+
+.info-title{
+	font-size: 80%;
+}
+
+.selected .info-value {
+	color: black;
+}
+
+ .info-value {
+ 	color: #009999;
+ 	text-align: center;
+	font-size: 125%;
+ }
+
+.info-option{
+	text-align: center;
+ 	color: #777;
+	border-bottom: 0.4rem solid white;
+	padding: 0;
+	margin-top: -3px;
+	padding-bottom: 3px;
+}
+
+.info-option:hover, .selected{
+	color: #009999;
+	border-bottom: 0.4rem solid #009999;
+}
+
+.to-follow {
+	width: 100%;
+	padding: 0;
+	margin: 1rem autof;
+	background-color: white;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 15px;
+}
+
+.tweets{
+	margin-left: -1rem;
+}
+
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+	padding-left: 0;
+}
+
+.fluid-link {
+	color: #009999;
+}
+
+.to-twittear {
+	width: 95% !important;
+	margin-top: 10px;
+}

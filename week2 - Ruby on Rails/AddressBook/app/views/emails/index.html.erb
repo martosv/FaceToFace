@@ -1,0 +1,18 @@
+<h2> <%= "Contact emails of #{@contact.name}" %></h2>
+
+<dl>
+	<% @emails.each do |email| %>
+		<dd>
+			<%= email.email %> 
+			<%= link_to 'Edit', edit_contact_email_path(@contact, email) %> |
+			<%= link_to 'Delete', contact_email_path(@contact, email), method: :delete, data: {confirm: "Are you sure?"} %>
+		</dd>
+	<% end %>
+</dl>
+	
+<br>
+
+<p class="styleblack">
+    <%= link_to 'New Email', new_contact_email_path(@contact) %> | 
+    <%= link_to 'Back', contact_path(@contact) %>
+</p>

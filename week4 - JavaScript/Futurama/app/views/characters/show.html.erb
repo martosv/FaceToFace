@@ -1,0 +1,52 @@
+<div class="futurama">Futurama eDarling</div>
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-md-8">
+			<div class="row name-character-principal">
+				<div class="col-md-8"><%= @character.name %></div>
+				<div class="col-md-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3" id="image-size"><%= image_tag(@character.photo, class: "image-size2") %></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-7 margin-text"> 
+					<ul>
+						<li>Genre: <%= @character.genre %></li>
+						<li>Age: <%= @character.age %></li>
+						<li>Job: <%= @character.job %></li>
+						<li>Species: <%= @character.species %></li>
+						<li>Favorite food: <%= @character.food %></li>
+						<li>Favorite code: <%= @character.code %></li>
+					</ul>
+				</div>	
+			</div>	
+		</div>
+
+
+		<div class="col-md-4 border-1">
+
+		<% @characters.each do |character| %>
+			<div class="row">
+
+				<div class="row border-2">
+					<div class="col-md-12"><%= link_to(character.name, character_path(character), class: "name-character") %></div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3" id="image-size"><%= image_tag(character.photo, class: "image-size") %></div>
+					<div class="col-md-1"></div>
+					<div class="col-md-8 margin-text"> 
+						<ul>
+							<li>Favorite food: <%= character.food %></li>
+							<li>Favorite code: <%= character.code %></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+
+		</div>
+	</div>
+</div>

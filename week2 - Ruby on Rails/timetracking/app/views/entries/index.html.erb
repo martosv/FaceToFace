@@ -1,0 +1,22 @@
+<%= flash_message_edit %>
+
+<h2> Name: <%= @project.name %> </h2>
+
+<ul>
+	<% @entries.each do |entry| %>
+		<li> 
+			<%= entry.hours %> hours 
+			<%= entry.minutes %> minutes -
+			<%= "#{entry.date.day}/#{entry.date.month}/#{entry.date.year}   " %>
+			<%= link_to 'Edit entry', edit_project_entry_path(@project, entry) %> |
+			<%= link_to 'Delete entry', project_entry_path(@project, entry), method: :delete, data: {confirm: "Are you sure?"} %>
+		</li>
+	<% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New entry', new_project_entry_path(@project) %> |
+
+
+<%= link_to 'Back to Project', project_path(@project) %>

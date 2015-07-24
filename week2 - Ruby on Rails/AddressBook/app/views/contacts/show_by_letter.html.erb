@@ -1,0 +1,21 @@
+<h1> <%= "Contacts by #{@letter}" %> </h1>
+
+<% if @contacts.any? %>
+
+	<dl>
+		<% @contacts.each do |contact| %>
+			<dd>
+				<%= contact.name %> <%= link_to 'Show', contact_path(contact) %>
+			</dd>
+		<% end %>
+	</dl>
+
+<% else %>
+	<%= "There are no contacts by #{@letter}." %>
+
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Back to Contacts', contacts_path %>

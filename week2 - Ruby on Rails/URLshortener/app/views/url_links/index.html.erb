@@ -1,0 +1,18 @@
+<h1> URLs </h1>
+
+<dl>
+
+	<% @url_links.each do |url_link| %>
+		<dd> 
+			<%= link_to "#{url_link.url}", redirect_to_url_path(url_link) %> : <%= url_link.visits %> visits
+			(<%= link_to 'Edit', edit_url_link_path(url_link) %> |
+			<%= link_to 'Delete', url_link_path(url_link), method: :delete, data: {confirm: "Are you sure?"} %>)
+		</dd>
+	<% end %>
+</dl>
+
+<br>
+
+<%= link_to 'New URL', new_url_link_path %> | 
+<%= link_to 'Top 10', top10_path %> | 
+<%= link_to 'URL Sumarize', show_path %>

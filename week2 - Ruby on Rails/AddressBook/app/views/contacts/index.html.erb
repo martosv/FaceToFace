@@ -1,0 +1,22 @@
+<h1> The Best Address Book </h1>
+
+<dl>
+	<% @contacts.each do |contact| %>
+		<dd>
+			<%= contact.name %> <%= link_to 'Show', contact_path(contact) %> | 
+			<%= link_to 'Edit', edit_contact_path(contact) %> |
+			<%= link_to 'Delete', contact_path(contact), method: :delete, data: {confirm: "Are you sure?"} %>
+		</dd>
+	<% end %>
+</dl>
+	
+<br>
+
+	<% ('a'..'z').to_a.each do |letter| %>
+		<%= link_to "#{letter}", show_by_letter_path(letter) %> |
+	<% end %>
+
+
+<p class="styleblack">
+    <%= link_to 'New Contact', new_contact_path %>
+</p>

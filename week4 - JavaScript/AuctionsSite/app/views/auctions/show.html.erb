@@ -1,0 +1,33 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+<h2>
+	<strong>Product:</strong>
+	<%= @auction.item %> (<%= link_to 'Edit auction', edit_user_auction_path(@auction) %>)</h2> 
+
+<table>
+	<tr>
+		<td class="styleblack"> <strong>Product:</strong></td>
+		<td><%= @auction.product %></td>
+	</tr> 
+
+	<tr>
+		<td class="styleblack"> <strong>Description:</strong></td>
+		<td><%= @auction.description %></td>
+	</tr> 
+	<tr> 
+		<td class="styleblack"><strong>Price:</strong></td>
+		<td><%= @auction.price %> </td>
+	</tr> 
+
+	<tr> 
+		<td class="styleblack"><strong>End date:</strong></td>
+		<td><%= @auction.end_date %> </td> 
+	</tr> 
+
+</table>
+
+<br>
+<%= link_to 'Back to auctions', auctions_path %> |
+<%= link_to 'Add a new bid', new_user_auction_bid_path(@auction) %> 
