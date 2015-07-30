@@ -27,7 +27,7 @@ class Project < ActiveRecord::Base
 	def self.last_created_projects num 
 	# se usa un metodo de clase siempre que nos refiramos a variables de clase, de manera que 
 	# como projects es de clase, siempre que juguemos con sus base de datos hay que usar self
-		projects = Project.order(created_at: :desc).limit(num) 
+		order(created_at: :desc).limit(num) 
 	end
 
 	def calculate_hours(month, year)

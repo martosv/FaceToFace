@@ -17,7 +17,7 @@ class Book < ActiveRecord::Base
 	end
 
 	def self.newest_books
-		self.order("created_at DESC")
+		order("created_at DESC")
 	end
 
 	def self.search(query)

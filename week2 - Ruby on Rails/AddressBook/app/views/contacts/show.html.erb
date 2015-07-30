@@ -10,12 +10,12 @@
 	<tr> 
 		<td class="styleblack"><strong>Phone Number(s):</strong></td>
 		<td><%= @contact.list_with_comma_number %> </td>
-		<td><%= link_to 'Edit phone_numbers', contact_phone_numbers_path(@contact) %></td>
+		<td><%= link_to 'Show phone_numbers', contact_phone_numbers_path(@contact) %></td>
 	</tr> 
 	<tr> 
 		<td class="styleblack"><strong>Email(s):</strong></td>
 		<td><%= @contact.list_with_comma_email %></td>
-		<td><%= link_to 'Edit emails', contact_emails_path(@contact) %></td>
+		<td><%= link_to 'Show emails', contact_emails_path(@contact) %></td>
 	</tr> 
 
 </table>

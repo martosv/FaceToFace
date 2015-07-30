@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
 	def index
-		@contacts = Contact.all.order_contacts
+		@contacts = Contact.order_contacts
 	end
 
 	def show

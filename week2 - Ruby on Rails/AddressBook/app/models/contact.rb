@@ -4,7 +4,7 @@ class Contact < ActiveRecord::Base
 	validates :name, presence: true, length: {maximum: 20}, uniqueness: true 
 
 	def self.order_contacts
-		self.order("name ASC")
+		order("name ASC")
 	end	
 
 	def list_with_comma_number

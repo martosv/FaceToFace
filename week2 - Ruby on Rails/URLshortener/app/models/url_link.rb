@@ -6,6 +6,6 @@ class UrlLink < ActiveRecord::Base
 	end
 
 	def self.get_top10
-		UrlLink.order("visits DESC").limit(10)
+		order("visits DESC").limit(10)
 	end
 end
